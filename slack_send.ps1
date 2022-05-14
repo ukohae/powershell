@@ -64,7 +64,7 @@ foreach ($cur_host in $hosts.split($sep)) {
 
 # // This is the part of the script that sends the message to Slack.
         if ($disk.Free -lt $minSize) {
-            $uriSlack = "https://hooks.slack.com/services/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"
+            $uriSlack = "slackURL"
             $body = ConvertTo-Json @{
                 pretext = "Low Disk Space!" 
                 text    = ("Drive " + $d + " has less than " + ($minSize / 1GB) `
