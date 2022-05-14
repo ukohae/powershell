@@ -46,7 +46,7 @@ function Get-DiskDetails($percent, $health, $operation) {
 
 If ($usagePercent -ge 80) {
     Get-DiskDetails $usagePercent $healthStatus $operationalStatus
-    $uriSlack = "https://hooks.slack.com/services/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"
+    $uriSlack = "slackURL"
     $body = ConvertTo-Json @{
         pretext = "Low Disk Space!" 
         text    = "Disk $selectedDrive is almost full. $usagePercent% of the $selectedDrive have been used"
